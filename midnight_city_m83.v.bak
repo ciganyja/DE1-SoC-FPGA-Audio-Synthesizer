@@ -1,0 +1,48 @@
+module midnight_city_m83(clk,rst,mode,startsong,note1select,note2select,sw1select);
+input clk;
+input rst;
+input startsong; //KEY1 Starts the song
+input mode; ///SW2 Will star the FSM
+ouput reg [2:0] note1select;
+ouput reg [2:0] note2select;
+ouput reg sw1select;
+
+reg tick_count;
+reg [4:0]S;
+reg [4:0]NS;
+
+parameters: START = 5'd0,
+				GFNOTE= 5'd1,
+				GDNOTE= 5'd2,
+				GBNOTE= 5'd3,
+				GFLONG= 5'd4,
+				FFNOTE= 5'd5,
+				FDNOTE= 5'd6,
+				FBNOTE= 5'd7,
+				FFLONG= 5'd8,
+				EFNOTE= 5'd9,
+				EDNOTE= 5'd10,
+				EBNOTE= 5'd11,
+				EFLONG= 5'd12,
+				BFNOTE= 5'd13,
+				BDNOTE= 5'd14,
+				BBNOTE= 5'd15,
+				BFLONG= 5'd16;
+			
+
+always(posedge clk or negedge rst)
+	if(rst==1'b0)
+		S<=START;
+	else 
+		S<=NS;
+		
+always@* begin
+	case(S)
+	
+	endcase
+end
+
+always(posedge clk or negedge rst) ///update counts and update 
+
+
+endmodule

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at DE1_SoC_Audio_Example.v(232): always construct contains both blocking and non-blocking assignments File: C:/Users/ciganyja/Downloads/AUDIO_ON_DE1_SOC_20242/AUDIO_ON_DE1_SOC_2024/Audio_Demo_tone_player/DE1_SoC_Audio_Example.v Line: 232
